@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+button{
+    margin-top: 250px;
+    width: 150px;
+    height: 70px;
+    font-size: larger;
+    color:white;
+    background-color:black;
+    border-radius: 9px;
+
+}
+        
+</style>
+</head>
+<body>
+    <center>
+    <button id='button'>Color</button>
+    </center>
+
+    <script>
+      const button = document.querySelector('button')
+      const body = document.querySelector('body')
+      const colors = [' #bbe280', '#78f3ed','#b7f3ab' ,'rgb(151, 122, 206)','#798bee','#f194cb','black','#f1929a', '#d6f078','white'];
+
+      body.style.backgroundColor ='pink'
+      button.addEventListener('click', changeColor)
+
+      function changeColor(){
+         // for(const i=0; i<=colors.length; i++){
+             // setTimeout(function(){
+                const colorIndex = parseInt(Math.random()*colors.length)
+                body.style.backgroundColor = colors[colorIndex]
+                document.querySelector('button').style.backgroundColor = colors[colorIndex+1]
+              //}, 1000);}
+     }
+    </script>
+</body>
+</html>
